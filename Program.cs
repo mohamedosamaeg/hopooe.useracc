@@ -46,44 +46,28 @@ namespace hopooe.useracc
             #endregion
 
 
-            respon respon = new respon();
+            
             #region Check password
             Console.WriteLine("write your password");
             string userPassword = Console.ReadLine();
 
 
 
-            bool IsPasswordCorrect = respon.CheckPassword(userPassword);
+           
 
-            if (IsPasswordCorrect)
-            {
-
-                Console.WriteLine("logged in");
-            }
-            else
-            {
-                Console.WriteLine("password is wrong");
-            }
+            
             #endregion
 
             #region Confirm password
             
             Console.WriteLine("enter you password");
              
-            string UserPassword = respon.ConvertoCapital(Console.ReadLine());
+           
             
             Console.WriteLine("confirm your password again");
-            
-            string UserConfirmPassword = respon.ConvertoCapital(Console.ReadLine());
 
-            bool IsPasswordConfirmed = respon.ConfirmPassword(UserPassword, UserConfirmPassword);
-            if (IsPasswordConfirmed)
-            {
-                Console.WriteLine("password confirmed");
-            }
-            else
-            {
-                Console.WriteLine("password is wrong");
+
+           
             }
 
             #endregion
@@ -92,38 +76,6 @@ namespace hopooe.useracc
 
 
     }
-    class respon
-    {
+    
         
-        public bool CheckPassword(string password)
-        {
-            string MainPassword = "";
-
-            if (password == MainPassword)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        public bool ConfirmPassword(string password, string confirmPassword)
-        {
-            if (password == confirmPassword)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        public string ConvertoCapital(string text)
-        {
-            
-            string Capital = text.ToUpper();
-            return Capital;
-        }
-    }
-}
+    
