@@ -15,8 +15,8 @@ namespace hopooe.useracc
         private string number;
         public string Mobile()
         {
-            number = string.Concat(mobile);
-            return mobile;
+           
+         return mobile;
         }
 
 
