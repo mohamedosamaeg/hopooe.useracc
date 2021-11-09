@@ -11,9 +11,15 @@ namespace hopooe.useracc
         public string Email;
         public DateTime BirthDay;
         public double monthlysalary;
-        public double mobile;
-         
-         
+        public string mobile;
+        private string number;
+        public string Mobile()
+        {
+            number = string.Concat(mobile);
+            return mobile;
+        }
+
+
         private string Name;
         public string FullName()
         {
@@ -22,6 +28,7 @@ namespace hopooe.useracc
             Name = string.Concat(FirstName + lastName);
             return Name;
         }
+
 
         private DateTime today = DateTime.Now; 
         private int Age;

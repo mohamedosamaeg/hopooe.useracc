@@ -15,18 +15,22 @@ namespace hopooe.useracc
             User Users = new User(); 
 
 
-            Console.WriteLine("first name");
+            Console.WriteLine("First Name");
             Users.FirstName = Console.ReadLine();
 
-            Console.WriteLine("last name");
+            Console.WriteLine("Last Name:");
             Users.lastName = Console.ReadLine();
+            Console.WriteLine("User Name:");
+            Users.UserName = Console.ReadLine();
+            Console.WriteLine("Email");
+            Users.Email = Console.ReadLine();
 
             Console.WriteLine("birthday");
             Users.BirthDay = Convert.ToDateTime(Console.ReadLine());
 
-            Console.WriteLine("Email");
-            Users.Email = Console.ReadLine();
+           
             Console.WriteLine("mobile");
+            Users.mobile = Console.ReadLine();
 
             Console.WriteLine("monthly Salary");
             Users.monthlysalary = Convert.ToDouble(Console.ReadLine());
@@ -35,9 +39,10 @@ namespace hopooe.useracc
 
             Console.WriteLine(Users.FullName());
             Console.WriteLine("User's age is: " + Users.CalAge());
+           
+           
+            Console.WriteLine("User's Mobile Number:" + Users.Mobile());
             Console.ReadLine();
-            
-            Console.WriteLine("");
             #endregion
 
 
@@ -92,7 +97,7 @@ namespace hopooe.useracc
         
         public bool CheckPassword(string password)
         {
-            string MainPassword = "12345";
+            string MainPassword = "";
 
             if (password == MainPassword)
             {
